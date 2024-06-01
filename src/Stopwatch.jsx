@@ -42,17 +42,17 @@ function Stopwatch() {
 
     function formatTime() {
         // return `00:00:00`;
-        // let hours = Math.floor(elapsedTime / (1000 * 60 * 60)); // 1000 ms in s, 60 s in min, 60 min in hr
+        let hours = Math.floor(elapsedTime / (1000 * 60 * 60)); // 1000 ms in s, 60 s in min, 60 min in hr
         let minutes = Math.floor(elapsedTime / (1000 * 60) % 60); // reset to 0 every 60 seconds
         let seconds = Math.floor(elapsedTime / 1000 % 60); // every 1000 ms (I think?)
         let milliseconds = Math.floor(elapsedTime % 1000 / 10); // display only the first 2 digits with that last "/ 10"
 
-        // hours = String(hours).padStart(2, "0");
+        hours = String(hours).padStart(2, "0");
         minutes = String(minutes).padStart(2, "0");
         seconds = String(seconds).padStart(2, "0");
         milliseconds = String(milliseconds).padStart(2, "0");
-        // return `${hours}:${minutes}:${seconds}:${milliseconds}`;
-        return `${minutes}:${seconds}:${milliseconds}`;
+        return `${hours}:${minutes}:${seconds}:${milliseconds}`;
+        // return `${minutes}:${seconds}:${milliseconds}`;
 
     }
 

@@ -17,7 +17,7 @@ function App() {
   <br></br>
   <br></br>
   <br></br>
-  <Stopwatch />
+  {/* <Stopwatch /> */}
   {/* <Stopwatch /> */}
 
   </>)
